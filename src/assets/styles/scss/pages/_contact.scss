@@ -1,0 +1,47 @@
+.contact {
+    background-color: #101920;
+    color: #fff;
+    padding: 100px 0;
+    &-top {
+        &_title {
+            font-size: 80px;
+            @include media-breakpoint-down(sm) {
+                font-size: 50px;
+            } 
+        }
+        &_descr {
+            font-size: 25px;
+            @include media-breakpoint-down(sm) {
+                font-size: 20px;
+            } 
+        }
+    }
+}
+
+.contact-form {
+    padding: 50px 0;
+    form {
+    @include media-breakpoint-down(sm) {
+        width: 100%;
+    }    
+        width: 70%;
+        padding: 50px 0;
+        input, textarea, select {
+            background-color: #C5C6C8;  
+            margin: 10px 0;
+            border-radius: 100px;
+        }
+    }
+
+    .form-button {
+        padding-top: 50px;
+        button {
+            font-size: 25px;
+            width: 250px;
+            height: 50px;
+            border-radius: 20px;
+            background-color: #6AD76F;
+            color: #101920;
+        }
+    }
+}

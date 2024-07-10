@@ -1,0 +1,119 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the form component.
+// -----------------------------------------------------------------------------
+
+.form-control {
+    @include media-breakpoint-up(lg) {
+        height: 52px;
+    }
+    font-size: 1.4rem;
+    font-feature-settings: 'case';
+    text-transform: uppercase;
+    height: 44px;
+    padding: 10px 20px;
+    border-color: #F2F2F2;
+    border-radius: 5px;
+}
+
+.custom-file-control {
+    position: relative;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    &__file {
+        display: none;
+    }
+    &__text {
+        position: relative;
+        z-index: 10;
+        width: calc(100% - 60px);
+        height: 60px;
+        border-color: #F2F2F2;
+        border-radius: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    &__button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 65px;
+        height: 60px;
+        background: url('../../images/arrow-up.svg') no-repeat center center #F9F9F9;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}
+
+.custom-select {
+    @include media-breakpoint-up(lg) {
+        height: 52px;
+    }
+    font-size: 1.4rem;
+    font-feature-settings: 'case';
+    text-transform: uppercase;
+    height: 44px;
+    padding: 10px 50px 10px 20px;
+    border-radius: 5px;
+    background-image: url($images-url + 'arrow-bottom-2.svg');
+    background-position: calc(100% - 20px) center;
+    background-size: 10px 5px;
+}
+
+.custom-checkbox-control {
+    &__input {
+        display: none;
+        &:not(:checked) {
+            & + .custom-checkbox-control__label {
+                .custom-checkbox-control__label-text {
+                    opacity: 0.7
+                }
+            }
+        }
+        &:checked {
+            & + .custom-checkbox-control__label:before {
+                background: url($images-url + 'done.svg') no-repeat center $primary-color;
+                background-size: 10px 8px;
+                border-color: $primary-color;
+            }
+        }
+    }
+    &__label {
+        font-size: 1.4rem;
+        font-feature-settings: 'case';
+        text-transform: uppercase;
+        padding-left: 33px;
+        &:before {
+            @include pseudo();
+            left: 0;
+            width: 18px;
+            height: 18px;
+            background-color: #fff;
+            border: 1px solid rgba(4, 11, 56, 0.5);
+            border-radius: 5px;
+        }
+    }
+}
+.custom-radio-control {
+    &__input {
+        @extend .custom-checkbox-control__input;
+        &:not(:checked) {
+            & + .custom-radio-control__label {
+                .custom-radio-control__label-text {
+                    opacity: 0.7
+                }
+            }
+        }
+        &:checked {
+            & + .custom-radio-control__label:before {
+                background-image: url($images-url + 'circle.svg');
+                background-size: 10px 10px;
+            }
+        }
+    }
+    &__label {
+        @extend .custom-checkbox-control__label;
+        &:before {
+            border-radius: 50%;
+        }
+    }
+}

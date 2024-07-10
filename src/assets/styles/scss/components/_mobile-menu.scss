@@ -1,0 +1,140 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the mobile menu component.
+// -----------------------------------------------------------------------------
+
+.mobile-menu {
+    @include media-breakpoint-between(sm, md) {
+        width: 375px;
+    }
+    left: 0;
+    top: 0;
+    z-index: -1000;
+    width: 320px;
+    height: 100%;
+    padding: 20px;
+    background-color: #f5f6f8;
+    opacity: 0;
+    visibility: hidden;
+    @include transition(opacity);
+    &--active {
+        @include media-breakpoint-down(md) {
+            z-index: 1030;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &__close {
+        width: 40px;
+        height: 40px;
+        background: url($images-url + 'close-1.svg') no-repeat center;
+        background-size: 20px 20px;
+    }
+    &__list-holder {
+        margin-top: 30px;
+        height: 100%;
+    }
+    &__list {
+        height: calc(100% - 125px);
+        overflow-y: auto;
+
+        &-item {
+            &:not(:first-child) {
+                position: relative;
+                padding-top: 15px;
+                margin-top: 15px;
+                &:before {
+                    @include pseudo();
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 1px;
+                    background-color: $primary-color;
+                    opacity: 0.2;
+                }
+            }
+
+            &-link,
+            &-children-list-dropdown {
+                position: relative;
+                font-family: $primary-font-bold;
+                font-size: 1.4rem;
+                font-feature-settings: 'case';
+                text-transform: uppercase;
+                color: $primary-color;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+            &-children-list-dropdown {
+                padding-right: 30px;
+                &:after {
+                    @include pseudo();
+                    top: calc(50% - 4px);
+                    right: 0;
+                    width: 15px;
+                    height: 8px;
+                    background: url($images-url + 'arrow-bottom-1.svg') no-repeat center;
+                    background-size: 15px 8px;
+                    opacity: 0.5;
+                    @include transition();
+                }
+                &--active {
+                    &:after {
+                        opacity: 1;
+                        @include rotate(180);
+                    }
+                }
+            }
+            > .mobile-menu__list-item-children-list {
+                display: none;
+            }
+            &-children-list {
+                margin-top: 5px;
+
+                &-item {
+                    &:not(:first-child) {
+                        margin-top: 12px;
+                    }
+
+                    &-link {
+                        font-size: 1.4rem;
+                        font-feature-settings: 'case';
+                        text-transform: uppercase;
+                        display: block;
+                        color: $primary-color;
+                        opacity: 0.5;
+                        padding-top: 8px;
+                        padding-bottom: 8px;
+                        &:hover {
+                            color: $primary-color;
+                        }
+                    }
+                    > .mobile-menu__list-item-children-list {
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+.mobile-menu-overlay {
+    left: 0;
+    top: 0;
+    z-index: -1000;
+    width: 100%;
+    height: 100%;
+    background-color: $primary-color;
+    opacity: 0;
+    visibility: hidden;
+
+    &--active {
+        @include media-breakpoint-down(md) {
+            z-index: 1020;
+            opacity: 0.5;
+            visibility: visible;
+        }
+    }
+}

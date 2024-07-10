@@ -1,0 +1,89 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+.button {
+    @include media-breakpoint-down(lg) {
+        padding: 10px 25px;
+    }
+    position: relative;
+    font-family: $primary-font;
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 2rem;
+    font-feature-settings: 'case';
+    text-transform: uppercase;
+    padding: 15px 30px;
+    border-radius: 25px;
+    @at-root {
+        button#{&} {
+            border: none;
+            cursor: pointer;
+        }
+    }
+    @at-root {
+        a#{&} {
+            display: inline-block;
+        }
+    }
+    &:before {
+        @include pseudo();
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.15);
+        border-radius: 25px;
+        opacity: 0;
+        visibility: hidden;
+        @include transition();
+    }
+    &:hover {
+        &:before {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    &--primary {
+        background-color: var(--primary-color);
+        color: #fff;
+        &:hover {
+            @at-root {
+                a#{&} {
+                    color: #fff;
+                }
+            }
+        }
+    }
+    &--secondary {
+        background-color: #EBEBEB;
+        color: $secondary-color;
+        &:hover {
+            @at-root {
+                a#{&} {
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+    &--white {
+        background-color: #fff;
+        color: #293A43;
+        &:hover {
+            @at-root {
+                a#{&} {
+                    color: #293A43;
+                }
+            }
+        }
+    }
+    &__text,
+    &__icon {
+        position: relative;
+    }
+    &__icon {
+        &--right {
+            margin-left: 20px;
+        }
+    }
+}

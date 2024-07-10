@@ -1,0 +1,25 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the social component.
+// -----------------------------------------------------------------------------
+
+.social {
+    &--footer {
+        .social__item {
+            color: $primary-color;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+    
+    &__item {
+        color: #fff;
+        &:not(:first-child) {
+            margin-left: 15px;
+        }
+        &:hover {
+            color: #fff;
+            opacity: 0.5;
+        }
+    }
+}

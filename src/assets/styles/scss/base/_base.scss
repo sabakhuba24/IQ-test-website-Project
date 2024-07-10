@@ -1,0 +1,134 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+@import "../../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../../node_modules/bootstrap/scss/mixins/breakpoints";
+
+// :root {
+//     --primary-color: #040B38;
+// }
+
+body {
+    color: $primary-color;
+    &.site--mobile-menu-active {
+        @include media-breakpoint-down(md) {
+            overflow: hidden;
+        }
+    }
+
+    .site {
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1410px;
+    }
+}
+
+.text-holder {
+    // &--white {
+    //     * {
+    //         color: #fff;
+    //     }
+    // }
+    // @include media-breakpoint-down(lg) {
+    //     * {
+    //         margin-left: initial!important;
+    //         margin-right: initial!important;
+    //     }
+    // }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: $primary-font;
+        font-weight: bold;
+        font-feature-settings: 'case';
+        text-transform: uppercase;
+    }
+    h1 {
+        @include media-breakpoint-up(lg) {
+            font-size: 2.6rem;
+        }
+        font-size: 2rem;
+    }
+    h2 {
+        @include media-breakpoint-up(lg) {
+            font-size: 2.4rem;
+        }
+        font-size: 1.8rem;
+    }
+    h3 {
+        @include media-breakpoint-up(lg) {
+            font-size: 2.2rem;
+        }
+        font-size: 1.6rem;
+    }
+    h4 {
+        @include media-breakpoint-up(lg) {
+            font-size: 2rem;
+        }
+        font-size: 1.4rem;
+    }
+    h5 {
+        @include media-breakpoint-up(lg) {
+            font-size: 1.8rem;
+        }
+        font-size: 1.2rem;
+    }
+    h6 {
+        @include media-breakpoint-down(lg) {
+            font-size: 1.6rem;
+        }
+        font-size: 1rem;
+    }
+    p {
+        opacity: 0.7;
+    }
+    ul,
+    ol {
+        list-style: none;
+        li {
+            position: relative;
+            padding-left: 20px;
+            text-align: left;
+        }
+    }
+    ul {
+        li {
+            &:before {
+                @include pseudo();
+                left: 0;
+                top: 8px;
+                width: 5px;
+                height: 5px;
+                border-radius: 100%;
+                background-color: $primary-color;
+            }
+        }
+    }
+    ol {
+        li {
+            counter-increment: list;
+            &:after {
+                @include pseudo($content: counter(list) '.');
+                left: 0;
+                top: 0;
+                color: $secondary-color;
+            }
+        }
+    }
+    img {
+        max-width: 100%!important;
+        height: auto!important;
+    }
+    iframe {
+        width: 100%!important;
+        height: 450px!important;
+    }
+}

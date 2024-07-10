@@ -1,0 +1,54 @@
+.reviews {
+    &-title {
+        padding: 50px 0;
+        &-top {
+            font-weight: bold;
+            font-size: 40px;
+        }
+        &-bottom {
+            img {
+                width: 25px;
+            }
+        }
+    }
+
+    &-item {
+        background-color: #D9D9D9;
+        color: #000;
+        border-radius: 20px;
+        width: 70%;
+        margin: 40px 0;
+        &-img {
+            padding: 20px;
+        }
+        &-text {
+            padding: 20px;
+            &_stars {
+                img {
+                    width: 20px;
+                }
+            }           
+            
+            &_name {
+                font-weight: bold;
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .reviews {
+        &-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &-text {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+    }
+}

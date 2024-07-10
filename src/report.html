@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- plugins -->
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="assets/plugins/swiper-master/css/swiper.min.css" />
+  <!-- custom -->
+  <link rel="stylesheet" href="assets/styles/css/styles.css" />
+  <title>IQ Test • Report</title>
+</head>
+
+<body class="site certificates-body">
+  <!-- report page content start  -->
+  <main class="site__content">
+    <div class="content">
+      <!-- report top start  -->
+      <section class="report">
+        <div class="report-top">
+          <div class="container">
+            <div class="row">
+              <div class="report-top-img col-12 d-flex">
+                <div class="report-top-img_logo">
+                  <a href="index.html"><img src="assets/images/logo.svg" alt="" /></a>
+                </div>
+                <div class="report-top-pdf d-flex flex-column align-items-center text-center">
+                  <a href="#"><img src="assets/images/pdf-icon.svg" alt="" /></a>
+                  <p>Download Your Certificate</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 d-flex justify-content-center">
+              <div class="report-result d-flex justify-content-around align-items-center">
+                <div class="report-result-item text-center">
+                  <p>Your IQ Score</p>
+                  <div class="report-result-item_object">
+                    <p>90</p>
+                  </div>
+                </div>
+
+                <div class="report-result-item text-center">
+                  <p>Time Needed</p>
+                  <div class="report-result-item_object">
+                    <p>1:25 min</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row" style="margin-top: 30px">
+            <div class="col-lg-8 col-12 report-chart" style="z-index: 1">
+              <canvas id="myChart" width="400" height="150"></canvas>
+              <div class="report-chart-text text-center">
+                <p>
+                  About 20% of people on the planet get this IQ score. It
+                  average. Don’t worry! All it means is that logical
+                  conclusions not your strongest suit.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-12" style="z-index: 1">
+              <div class="report-chart-result d-flex flex-column align-items-center text-center justify-content-center">
+                <div class="report-chart-result_top">
+                  <p>Best Results By Gender</p>
+                </div>
+                <div class="report-chart-result_bottom">
+                  <p>Last 100 Results</p>
+                  <p>World: 98</p>
+                  <p>Country: 98</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-8 col-12 report-chart" style="z-index: 1">
+              <canvas id="myChart2" width="400" height="150"></canvas>
+              <div class="report-chart-text text-center">
+                <p>
+                  You have completed the test faster than 99% of all our test-takers.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-12" style="z-index: 1">
+              <div class="report-chart-result d-flex flex-column align-items-center text-center justify-content-center">
+                <div class="report-chart-result_top">
+                  <p>Best Results By Age</p>
+                </div>
+                <div class="report-chart-result_bottom">
+                  <p>Last 100 Results</p>
+                  <p>World: 99</p>
+                  <p>Country: 96</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- report top end  -->
+
+      <!-- report test start  -->
+      <section class="report-test">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 report-test-title text-center">
+              <p>Your Ranking</p>
+            </div>
+
+            <div class="col-4 report-test-data text-center">
+              <div class="report-test-data_top">
+                <p>54 Hours</p>
+              </div>
+              <div class="report-test-data_bottom">
+                <p>1162</p>
+              </div>
+            </div>
+
+            <div class="col-4 report-test-data text-center">
+              <div class="report-test-data_top">
+                <p>7 Days</p>
+              </div>
+              <div class="report-test-data_bottom">
+                <p>8645</p>
+              </div>
+            </div>
+
+            <div class="col-4 report-test-data text-center">
+              <div class="report-test-data_top">
+                <p>30 Days</p>
+              </div>
+              <div class="report-test-data_bottom">
+                <p>41934</p>
+              </div>
+            </div>
+
+            <div class="col-12 text-center">
+              <div class="test-difficulty">
+                <p>Difficulty 8/20</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="test col-12 mt-4 d-flex align-items-center justify-content-center">
+              <div class="test-content d-flex flex-column align-items-center">
+                <div class="row">
+                  <div class="test-content-bottom col-12 d-flex align-items-center">
+                    <div class="row  justify-content-around">
+                      <div class="test-content-bottom_question col-lg-7">
+                        <img src="uploads/test-main-img.png" width="100%" height="400" alt="" />
+                      </div>
+  
+                      <div class="test-content-bottom_answers d-flex justify-content-center align-items-center col-lg-3">
+                        <div class="row">
+                          <div class="col-6 col-lg-6 col-sm-4">
+                            <div
+                              class="test-content-bottom_answers-item test-content-bottom_answers-item_correct d-flex justify-content-center align-items-center">
+                              <a href="#"><img src="uploads/test-image1.png" alt="" width="100%" height="70" /></a>
+                            </div>
+                          </div>
+  
+                          <div class="col-6 col-lg-6 col-sm-4">
+                            <div
+                              class="test-content-bottom_answers-item test-content-bottom_answers-item_wrong d-flex justify-content-center align-items-center">
+                              <a href="#"><img src="uploads/test-image2.png" alt="" width="100%" height="70" /></a>
+                            </div>
+                          </div>
+  
+                          <div class="col-6 col-lg-6 col-sm-4">
+                            <div
+                              class="test-content-bottom_answers-item d-flex justify-content-center align-items-center">
+                              <a href="#"><img src="uploads/test-image3.png" alt="" width="100%" height="70" /></a>
+                            </div>
+                          </div>
+  
+                          <div class="col-6 col-lg-6 col-sm-4">
+                            <div
+                              class="test-content-bottom_answers-item d-flex justify-content-center align-items-center">
+                              <a href="#"><img src="uploads/test-image4.png" alt="" width="100%" height="70" /></a>
+                            </div>
+                          </div>
+  
+                          <div class="col-6 col-lg-6 col-sm-4">
+                            <div
+                              class="test-content-bottom_answers-item d-flex justify-content-center align-items-center">
+                              <a href="#"><img src="uploads/test-image5.png" alt="" width="100%" height="70" /></a>
+                            </div>
+                          </div>
+  
+                          <div class="col-6 col-lg-6 col-sm-4">
+                            <div
+                              class="test-content-bottom_answers-item d-flex justify-content-center align-items-center">
+                              <a href="#"><img src="uploads/test-image6.png" alt="" width="100%" height="70" /></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="test-content-buttons d-flex justify-content-between align-items-center">
+                  <a href="#"><button class="btn">Previous</button></a>
+                  <a href="#"><button class="btn secondary">Next</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- report test end  -->
+
+      <footer class="site__footer bg-white">
+        <div class="footer">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="footer-top d-flex flex-column align-items-center">
+                  <img src="assets/images/footerlogo.svg" alt="" />
+                  <div class="footer-top_text">
+                    <p>Test Your IQ</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="footer-nav col-4 text-center">
+                <p><a href="#">Terms Of Use</a></p>
+              </div>
+
+              <div class="footer-nav col-4 text-center">
+                <p><a href="#">Privacy Policy</a></p>
+              </div>
+
+              <div class="footer-nav col-4 text-center">
+                <p><a href="#">Cookies Policy</a></p>
+              </div>
+
+              <div class="col-12 text-center">
+                <p>
+                  The material on this website is provided for entertainment
+                  purposes only and should not be used to make decisions. Any use
+                  of the content on this platform is solely at your own risk and
+                  we always advise completing an in-person evaluation with a
+                  professional therapist in your area.
+                </p>
+                <p>2023 © All rights served</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+  <!-- report page content end  -->
+
+  <!-- plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js"
+    integrity="sha512-tMabqarPtykgDtdtSqCL3uLVM0gS1ZkUAVhRFu1vSEFgvB73niFQWJuvviDyBGBH22Lcau4rHB5p2K2T0Xvr6Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"
+    integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="assets/minJs/default.min.js"></script>
+  <script src="assets/minJs/index.min.js"></script>
+</body>
+
+</html>

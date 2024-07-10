@@ -1,0 +1,16 @@
+/**
+ * Basic typography style for copy text
+ */
+html {
+    // @media (max-width: 1366px) {
+    //     font-size: 52.5%;
+    // }
+    font-size: 62.5%;
+}
+body {
+    font-family: $primary-font;
+    font-size: 1.6rem;
+}
+b, strong {
+    font-weight: bold;
+}

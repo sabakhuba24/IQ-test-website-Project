@@ -1,0 +1,39 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the breadcrumbs component.
+// -----------------------------------------------------------------------------
+
+.breadcrumbs {
+    &__title {
+        font-feature-settings: 'case';
+        text-transform: uppercase;
+        margin-right: 5px;
+    }
+    &__list {
+        &-item {
+            @include media-breakpoint-up(xl) {
+                &:not(:first-child) {
+                    position: relative;
+                    padding-left: 20px;
+                    &:before {
+                        @include pseudo();
+                        content: ' \002F';
+                        left: 5px;
+                    }
+                }
+            }
+            @include media-breakpoint-down(lg) {
+                &:not(:last-child) {
+                    display: none;
+                }
+            }
+            font-feature-settings: 'case';
+            text-transform: uppercase;
+            display: block;
+            color: $secondary-color;
+            @at-root a#{&}:hover {
+                color: $secondary-color;
+                text-decoration: underline;
+            }
+        }
+    }
+}

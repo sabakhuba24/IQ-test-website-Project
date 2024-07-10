@@ -1,0 +1,146 @@
+.report {
+    padding-bottom: 50px;
+    &-top {
+        @media (min-width: 1280px) {
+            margin-bottom: -50%;
+            padding-top: 100px;
+            padding-bottom: 50%;
+            background-color: transparent;
+        }
+        @media (max-width: 1279px) {
+            background-color: #101920;
+            padding-top: 50px;
+            padding-bottom: 50px;          
+        }     
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        left: 1;
+        color: #fff;
+        font-weight: bold;
+        overflow: hidden;
+        &:before {
+            @media (max-width: 1279px) {
+                content: none;
+            }
+            @include pseudo();
+            top: -100%;
+            z-index: -10;
+            margin-left: -50px;
+            width: 106.3%;
+            padding-top: 50%;
+            padding-bottom: 70%;
+            background-color: #101920;
+            border-bottom-left-radius: 40%;
+            border-bottom-right-radius: 40%;
+        }
+
+        &-img {
+            &_logo {
+                width: 40%;
+                @include media-breakpoint-down(md) {
+                    width: 120px;
+                    padding: 40px 0;
+                }
+            }
+            @include media-breakpoint-down(md) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        &-pdf {
+            font-size: 20px;
+            p {
+                padding: 10px 0;
+            }
+        }
+    }
+
+    &-result {
+        background-color: #fff;
+        border-radius: 20px;
+        color: #000;
+        margin-top: 50px;
+        width: 70%;
+        height: 150px;
+        @include media-breakpoint-down(md) {
+            width: 100%;
+        }
+        &-item {
+            font-size: 25px;
+            font-weight: bold;
+            &_object {
+                font-size: 40px;
+            }
+        }
+    }
+
+    &-chart {
+        background-color: #fff;
+        font-weight: bold;
+        color: #000;
+        border-radius: 40px;
+        margin-top: 30px;
+        &-text {
+            padding: 10px 0;
+            text-transform: uppercase;
+        }
+    }
+
+    &-chart-result {
+        width: 100%;
+        color: #000;
+        background-color: #fff;
+        border-radius: 40px;
+        height: 400px;
+        margin-top: 30px;
+        font-size: 40px;
+        @include media-breakpoint-down(md) {
+            height: 200px;
+            font-size: 25px;
+        }
+        &_top {
+            font-weight: bold;
+            padding: 20px;
+        }
+        &_bottom {
+            font-size: 35px;
+            @include media-breakpoint-down(md) {
+                height: 200px;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.report-test {
+    background-color: #fff;
+    color: #000;
+    &-title {
+        text-transform: uppercase;
+        padding: 50px 0;
+        font-size: 30px;
+    }
+
+    &-data {
+        text-transform: uppercase;
+        font-size: 40px;
+        @include media-breakpoint-down(md) {
+            font-size: 20px;
+        }
+        &_top {
+            font-weight: bolder;
+        }
+    }
+
+    .test-difficulty {
+        font-weight: bolder;
+        font-size: 25px;
+        padding-top: 30px;
+        text-transform: uppercase;
+        @include media-breakpoint-down(md) {
+            font-size: 18px;
+        }
+    }
+}

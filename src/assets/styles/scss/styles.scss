@@ -1,0 +1,49 @@
+@charset 'UTF-8';
+@import '../fonts/fonts.scss';
+
+// 1. extensions
+@import
+  'node_modules/bootstrap/scss/bootstrap';
+
+// 2. Configuration and helpers
+@import
+  './abstracts/variables',
+  './abstracts/functions',
+  './abstracts/mixins';
+
+// 3. Vendors
+@import
+  './vendor/normalize';
+
+// 4. Base stuff
+@import
+  './base/base',
+  './base/typography',
+  './base/helpers';
+
+// 5. Layout-related sections
+@import 
+  './layout/header',
+  './layout/content',
+  './layout/footer';
+// 6. Components
+@import
+  './components/social',
+  './components/button',
+  './components/form',
+  './components/datepicker',
+  './components/scroll-top',
+  './components/mobile-menu',
+  './components/breadcrumbs',
+  './components/pager',
+  './components/attached-files';
+
+// 7. Page-specific styles
+@import
+  './pages/home',
+  './pages/test',
+  './pages/result',
+  './pages/certificates',
+  './pages/reviews',
+  './pages/report',
+  './pages/contact';

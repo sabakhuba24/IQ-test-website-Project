@@ -1,0 +1,181 @@
+.certificates-body {
+    background-color: #D9D9D9;
+}
+
+.certificates {
+    &-top {
+        z-index: -100;
+        @media (min-width: 1280px) {
+            margin-bottom: -50%;
+            padding-top: 100px;
+            padding-bottom: 50%;
+            background-color: transparent;
+            
+        }
+        @media (max-width: 1279px) {
+            background-color: #FFE715;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            
+        }
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        left: 1;
+        font-size: 50px;
+        color: #101920;
+        font-weight: bold;
+        overflow: hidden;
+        &:before {
+            @media (max-width: 1279px) {
+                content: none;
+            }
+            @include pseudo();
+            top: -100%;
+            z-index: -10;
+            margin-left: -50px;
+            width: 106.3%;
+            padding-top: 50%;
+            padding-bottom: 80%;
+            background-color: #FFE715;
+            border-bottom-left-radius: 40%;
+            border-bottom-right-radius: 40%;
+        }
+   
+
+        &-text {
+            text-transform: uppercase;
+            font-size: 60px;
+            font-weight: bold;
+            width: 100%;
+            margin-top: -80px;
+            &_secondary-text {
+                font-size: 40px;
+            }
+        }
+
+        &-img {
+            padding: 0px 50px;
+            width: 100%;
+            z-index: 1;
+        }
+    }
+
+    &-bottom {
+        margin-top: 50px;
+        &-item {
+            margin-bottom: 20px;
+            .card {
+                border-radius: 10px;
+                z-index: 1;
+                &-title {
+                    font-size: 35px;
+                    padding: 20px 0;
+
+                    &_secondary {
+                        padding: 20px 0;
+                        font-size: 25px;
+                    }
+
+                    &_full-results {
+                        padding-top: 20px;
+                        button {
+                            padding: 20px 40px;
+                            font-size: 25px;
+                            border-radius: 30px;
+                            color: #fff;
+                            background-color: #101920;
+                        }
+                    }
+                }
+
+                &-info {
+                    padding-top: 50px;
+                    padding-bottom: 10px;
+                    &-tick {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 100px;
+                        background-color: #FFE715;
+                    }
+
+                    &-mark {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 100px;
+                        background-color: #6E6F70;
+                    }
+
+                    &-text {
+                        width: 50%;
+                        &_top {
+                            font-weight: bold;
+                            font-size: 20px;
+                        }
+
+                        &_bottom {
+                            color: #6E6F70;
+                            font-size: 15px;
+                        }
+                    }
+                }
+
+                &-img {
+                    img {
+                        width: 28%;
+                    }
+                }
+
+                &-price {
+                    padding: 40px 0;
+                    font-size: 40px;
+                }
+
+                &-button {
+                    padding: 20px 0;
+
+                    button {
+                        font-size: 25px;
+                        border: 1px solid #000;
+                        border-radius: 100px;
+                        padding: 10px 50px;
+                    }
+
+                    &_active {
+                        padding: 20px 0;
+
+                        button {
+                            font-size: 25px;
+                            background-color: #6AD76F;
+                            border-radius: 100px;
+                            padding: 10px 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .certificates {
+        &-top {
+            &-text {
+                font-size: 35px;
+                margin-top: 15px;
+                &_secondary-text {
+                    font-size: 20px;
+                }
+            }
+
+            &-img {
+                display: flex;
+                justify-content: center;
+            }
+        }
+        &-bottom {
+            margin-top: 10px;
+        }
+
+    }
+}
